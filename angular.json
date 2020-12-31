@@ -56,13 +56,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "4mb",
+                  "maximumError": "4mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "4mb",
+                  "maximumError": "4mb"
                 }
               ]
             }
@@ -118,6 +118,16 @@
             "production": {
               "devServerTarget": "clr-ng-examples:serve:production"
             }
+          }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "repo": "https://github.com/juanmendes/clr-ng-examples",
+            "baseHref": "/clr-ng-examples/",
+            "noSilent": true,
+            "name": "ps37",
+            "email": "prudhvi.af121@gmail.com"
           }
         }
       }
